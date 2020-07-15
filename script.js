@@ -76,5 +76,44 @@ businessHours = [
 ]
 
 
+//Used for creating fields and display scheduler
+businessHours.forEach(function(hour) {
+    
+    // used for creating the time blocks row
+    var timeBlock = $("<form>").attr({"class": "row"});
+    
+    $(".container").append(timeBlock);
+
+    // used for time text field
+    var hourLabel = $("<div>").text(`${hour.hour}${hour.timeOfDay}`)
+        .attr({"class": "col-md-2 hour"
+    });
+
+
+
+
+//Used for task fields withon time block
+var hourTask = $("<div>").attr({"class": "col-md-9 description"});
+
+    var taskInfo = $("<textarea>");
+
+    hourTask.append(taskInfo);
+
+
+    taskInfo.attr("id", hour.id);
+
+    var saveButton = $("<i class='fa fa-save'></i>")
+
+
+    var saveTask = $("<button>")
+    
+    .attr({"class": "col-md-1 saveBtn"});
+
+
+    saveTask.append(saveButton);
+
+    timeBlock.append(hourLabel, hourTask, saveTask)
+
+});
 
 
