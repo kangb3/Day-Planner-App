@@ -18,5 +18,5 @@ The following has been implemented in the application
 
 
 # URL
-https://kangb3.github.io/Day-Planner-App/
-https://github.com/kangb3/Day-Planner-App
+- https://kangb3.github.io/Day-Planner-App/
+- https://github.com/kangb3/Day-Planner-App
