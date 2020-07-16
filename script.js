@@ -14,7 +14,7 @@ businessHours = [
         id: "0",
         hour: "09",
         time: "09",
-        timeOfDay: "am",
+        timeOfDay: "AM",
         input: ""
     },
     {
