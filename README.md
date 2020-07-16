@@ -13,6 +13,10 @@ The following has been implemented in the application
 4. Users input is stored in localStorage
 
 
+# Screenshot
+![image](https://user-images.githubusercontent.com/34286295/87629670-4f196c80-c6e8-11ea-88f4-5720b6b79de5.png)
+
+
 # URL
 https://kangb3.github.io/Day-Planner-App/
 https://github.com/kangb3/Day-Planner-App
