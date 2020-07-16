@@ -103,17 +103,13 @@ var hourTask = $("<div>").attr({"class": "col-md-9 description p-0"});
     taskInfo.attr("id", hour.id);
 
     if (hour.time < moment().format("HH")) {
-        taskInfo.attr ({
-            "class": "past", 
-        })
+        taskInfo.attr ({"class": "past", })
+
     } else if (hour.time === moment().format("HH")) {
-        taskInfo.attr({
-            "class": "present"
-        })
+        taskInfo.attr({"class": "present"})
+
     } else if (hour.time > moment().format("HH")) {
-        hour.attr({
-            "class": "future"
-        })
+        hour.attr({"class": "future"})
     }
 
     var saveButton = $("<i class='fa fa-save'></i>")
@@ -129,7 +125,7 @@ var hourTask = $("<div>").attr({"class": "col-md-9 description p-0"});
 });
 
 
-
+//setting data of localStorage to page if data is present
 function init() {
     var savedHours = JSON.parse(localStorage.getItem("businessHours"));
 
@@ -141,7 +137,7 @@ function init() {
     showTasks();
 }
 
-init();
+
 
 // stores user input to localStorage
 function saveTasks() {
@@ -151,17 +147,18 @@ function saveTasks() {
 
 function showTasks() {
         businessHours.forEach(function (hour) {
-            $(`#${hour.id}`).val(hour.timeOfDay);
+            $(`#${hour.id}`).val(hour.input);
         })
     }
-    
 
+//calls function for saving task
+init();
 // saves data to be used in localStorage
 $(".saveBtn").on("click", function(event) {
     event.preventDefault();
-    var saveIndex = $(this).siblings(".description").children(".future").attr("id");
-    businessHours[saveIndex].input = $(this).siblings(".description").children(".future").val();
-    console.log(saveIndex);
+    var index = $(this).siblings(".description").children(".future").attr("id");
+    businessHours[index].input = $(this).siblings(".description").children(".future").val();
+    //console.log(index);
     saveTasks();
     showTasks();
 })
